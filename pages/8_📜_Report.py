@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 st.title("Crop Yield Report")
 
 
-crop = pd.read_csv("C:\\Nidhi\\crop\\crop_yield.csv")
+crop = pd.read_csv("crop_data/crop_yield.csv")
 
 crop_state = crop.groupby('State').sum()
 crop_state.sort_values(by = 'Yield', inplace=True, ascending = False)
@@ -79,8 +79,8 @@ col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\7_🤖_Modeling.py", label="Previous", icon="⬅")
+    st.page_link("pages/7_🤖_Modeling.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\9_🤝_Help.py", label="Next", icon="➡")
+    st.page_link("pages/9_🤝_Help.py", label="Next", icon="➡")

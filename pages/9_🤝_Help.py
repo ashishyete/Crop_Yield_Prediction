@@ -84,18 +84,18 @@ with tab2:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-    local_css("C:\\Nidhi\\crop\\style\\style.css")
+    local_css("style/style.css")
 
 
 col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\8_📜_Report.py", label="Previous", icon="⬅")
+    st.page_link("pages/8_📜_Report.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\1_🏠_HomePage.py", label="Next", icon="➡")
+    st.page_link("1_🏠_HomePage.py", label="Next", icon="➡")
 
 
 

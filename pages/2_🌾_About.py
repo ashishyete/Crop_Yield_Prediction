@@ -6,7 +6,6 @@ from io import BytesIO
 
 
 
-
 st.title('Crop Yield Prediction :seedling:')
 
 st.write(
@@ -45,8 +44,8 @@ col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\1_🏠_HomePage.py", label="Previous", icon="⬅")
+    st.page_link("1_🏠_HomePage.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\3_📚_Dataset.py", label="Next", icon="➡")
+    st.page_link("pages/3_📚_Dataset.py", label="Next", icon="➡")

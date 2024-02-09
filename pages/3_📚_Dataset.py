@@ -1,10 +1,5 @@
 import streamlit as st
 import pandas as pd
-from st_pages import Page, show_pages, add_page_title
-
-
-
-
 
 
 
@@ -24,19 +19,19 @@ st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The crop yield predict
 
 
 
-crop = pd.read_csv('C:\\Nidhi\\crop\\crop_yield.csv')
+crop = pd.read_csv('crop_data/crop_yield.csv')
 st.write(crop)
 
-st.session_state['crop'] = pd.read_csv('C:\\Nidhi\\crop\\crop_yield.csv')
+st.session_state['crop'] = pd.read_csv('crop_data/crop_yield.csv')
 
 
 col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\2_🌾_About.py", label="Previous", icon="⬅")
+    st.page_link("pages/2_🌾_About.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\4_📈_Descriptive.py", label="Next", icon="➡")
+    st.page_link("pages/4_📈_Descriptive.py", label="Next", icon="➡")
 

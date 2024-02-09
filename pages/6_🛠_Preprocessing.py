@@ -12,7 +12,7 @@ from sklearn.impute import SimpleImputer
 # Load sample data
 # Use caching to avoid reloading data on each interaction
 
-crop = pd.read_csv("C:\\Nidhi\\crop\\crop_yield.csv")
+crop = pd.read_csv("crop_data/crop_yield.csv")
 
 @st.cache_data(show_spinner=False)
 def clean_data(crop, handle_missing, winsorize_outliers, scale_numerical, encode_categorical):
@@ -81,10 +81,10 @@ col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\5_📊_Exploration.py", label="Previous", icon="⬅")
+    st.page_link("pages/5_📊_Exploration.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\7_🤖_Modeling.py", label="Next", icon="➡")
+    st.page_link("pages/7_🤖_Modeling.py", label="Next", icon="➡")
 
 

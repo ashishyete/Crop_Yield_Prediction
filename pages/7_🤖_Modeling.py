@@ -22,7 +22,7 @@ st.title("Crop Yield Prediction")
 select_features = st.container()
 
 # load and read data
-crop = pd.read_csv("C:\\Nidhi\\crop\\crop_yield.csv")
+crop = pd.read_csv("crop_data/crop_yield.csv")
 
 crop_df = crop.copy()
 crop_df = crop_df.drop(['Crop_Year','Pesticide', 'Crop', 'State', 'Season'], axis = 1)
@@ -117,11 +117,11 @@ col1, col2, col2, col4, col5 = st.columns(5)
 
 with col1:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\6_🛠_Preprocessing.py", label="Previous", icon="⬅")
+    st.page_link("pages/6_🛠_Preprocessing.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("C:\\Nidhi\\predictive_analysis\\pages\\8_📜_Report.py", label="Next", icon="➡")
+    st.page_link("pages/8_📜_Report.py", label="Next", icon="➡")
 
 
 
