@@ -14,7 +14,7 @@ crop_state.sort_values(by = 'Yield', inplace=True, ascending = False)
 
 tab1, tab2, tab3 = st.tabs(["Statewise Yield", "Statewise Annual Rainfall","Statewise Fertilizer Usage"])
 
-with tab1:
+with tab2:
     st.subheader("Annual Rainfall in States of India")
 
     # Create an interactive bar chart with Plotly Express
@@ -35,7 +35,7 @@ with tab1:
 
         'More specifically, the features showcased a more symmetric distribution post-scaling, aligning with the assumptions of normality. The lack of significant correlations among most features, except for the positive correlation noted between production and yield, and between Pesticide and Fertilizer substantiates the assumption of independence among variables. These findings significantly contribute to fortifying the robustness of subsequent analyses and modeling endeavors within the agricultural dataset.')
 
-with tab2:
+with tab1:
     st.subheader("Crop Yield in States of India")
     # Create an interactive bar chart with Plotly Express
     fig = px.bar(crop, x='State', y='Yield', color='State', hover_data=['Yield'])
