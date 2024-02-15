@@ -5,6 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+
 st.set_page_config(
     page_title='Getting Started',
     page_icon=":seedling:",
