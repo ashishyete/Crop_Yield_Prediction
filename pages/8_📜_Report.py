@@ -3,9 +3,23 @@ import streamlit as st
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+from streamlit_supabase_auth import logout_button
 st.title("Crop Yield Report")
 
+session_state = st.session_state
+
+if hasattr(st,'session_state'):
+
+    if hasattr(st.session_state, 'id') and hasattr(st.session_state, 'email'):
+        print("session_state is initialized with id and email - 8_Report")
+    else:
+        print("session_state is not fully initialized - 8_Report")
+        st.warning("Please Login to Continue...")
+        login_path = "/"
+        st.markdown(f'<a href="{login_path}" target="_self"> Login </a>', unsafe_allow_html=True)
+        st.stop()
+else:
+    st.warning('Session_state not initialized. -8_Report ')
 
 crop = pd.read_csv("crop_data/crop_yield.csv")
 
@@ -77,10 +91,14 @@ with tab3:
 
 col1, col2, col2, col4, col5 = st.columns(5)
 
+with st.sidebar:
+    st.write(f"Welcome  - {session_state.email}")
+    logout_button()
+
 with col1:
 
-    st.page_link("pages/7_🤖_Modeling.py", label="Previous", icon="⬅")
+    st.page_link("pages/9_🤖_Modeling.py", label="Previous", icon="⬅")
 
 with col5:
 
-    st.page_link("pages/9_🤝_Help.py", label="Next", icon="➡")
+    st.page_link("pages/10_🤝_Help.py", label="Next", icon="➡")
